@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Navbar } from '../navigation/Navbar';
@@ -11,35 +12,50 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="antialiased w-full text-gray-700 px-3 md:px-0">
+  <div className="overflow-hidden fixed top-0 left-0 top-0 bottom-0 antialiased w-full px-3 md:px-0">
     {props.meta}
 
-    <div className="max-w-screen-md mx-auto">
-      <div className="border-b border-gray-300">
-        <div className="pt-16 pb-8">
-          <div className="font-semibold text-3xl text-gray-900">
-            {AppConfig.title}
-          </div>
-          <div className="text-xl">{AppConfig.description}</div>
-        </div>
+    <div className="mx-auto z-10">
+      <Image
+        className="fixed w-screen h-screen z-10"
+        src="/logo_sauvageonnes.png"
+        layout="responsive"
+        height="1360"
+        width="6147"
+      />
+    </div>
+    <div
+      className="z-0 mx-auto max-w-max"
+      style={{ transform: 'translateY(-125px)', zIndex: -1 }}
+    >
+      <div className="absolute decoration-8 font-mono -top-1/4 flex flex-col align-center justify-center left-0 right-0 font-extrabold text-center text-4xl text-white overline h-full z-10">
+        <h2
+          style={{
+            margin: 'auto',
+            maxWidth: 400,
+            transform: 'translateY(125px) rotate(-25deg)',
+          }}
+        >
+          {AppConfig.title}
+        </h2>
+      </div>
+      <Image
+        src="/assets/images/sign.svg"
+        layout="intrinsic"
+        width="1280"
+        height="900"
+      />
+      <div className=" border-b border-gray">
         <div>
           <Navbar>
             <li className="mr-6">
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link href="/about/">
-                <a>About</a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <a href="https://github.com/ixartz/Next-js-Blog-Boilerplate">
-                GitHub
-              </a>
+              <Link href="/">Youtube</Link>
             </li>
           </Navbar>
+
+          <div className="text-2xl w-full text-center text-white underline">
+            {AppConfig.description}
+          </div>
         </div>
       </div>
 
@@ -50,13 +66,10 @@ const Main = (props: IMainProps) => (
         <span role="img" aria-label="Love">
           ♥
         </span>{' '}
-        by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
-        {/*
-         * PLEASE READ THIS SECTION
-         * We'll really appreciate if you could have a link to our website
-         * The link doesn't need to appear on every pages, one link on one page is enough.
-         * Thank you for your support it'll mean a lot for us.
-         */}
+        by{' '}
+        <span role="img" aria-label="Love">
+          🍻
+        </span>{' '}
       </div>
     </div>
   </div>

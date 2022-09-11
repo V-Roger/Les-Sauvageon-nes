@@ -1,10 +1,10 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Next.js Boilerplate',
+  site_name: 'Les Sauvageon·nes',
+  title: 'One does not simply walk into Mardore',
   description:
-    'Starter code for your Next.js blog Boilerplate with Tailwind CSS',
-  url: 'https://example.com',
-  locale: 'en',
-  author: 'Anonymous',
+    'Association vouée à la préservation de la ferme dite du Servageon',
+  url: 'https://les.sauvageon.nes',
+  locale: 'fr',
+  author: 'Virgil Roger',
   pagination_size: 5,
 };
