@@ -23,7 +23,8 @@ const Main = (props: IMainProps) => (
         className="border-t-8 border-white text-center py-8 text-sm"
         style={{ background: '#58bb47' }}
       >
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
+        © Copyright {new Date().getFullYear()} {AppConfig.site_name}. Powered
+        with{' '}
         <span role="img" aria-label="Love">
           ♥
         </span>{' '}

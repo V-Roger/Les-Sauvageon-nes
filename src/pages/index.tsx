@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 import { IBlogGalleryProps } from '../blog/BlogGallery';
 import { Meta } from '../layout/Meta';
+import { Mailchimp } from '../mailchimp/Mailchimp';
 import { Navbar } from '../navigation/Navbar';
 import { IPaginationProps } from '../pagination/Pagination';
 import { Main } from '../templates/Main';
@@ -13,7 +14,7 @@ import { AppConfig } from '../utils/AppConfig';
 import { getAllPosts } from '../utils/Content';
 
 const Index = () => {
-  const [isLinkHovering, setIsLinkHovered] = useState(false);
+  const [isLinkHovering, setIsLinkHovered] = useState('');
 
   return (
     <Main
@@ -60,20 +61,36 @@ const Index = () => {
       </div>
 
       <div className="max-w-xl xl:max-w-6xl mx-auto p-8">
-        <div className="text-3xl p-8 bg-white font-bold rounded shadow">
-          <div className="text-center underline">{AppConfig.description}</div>
-          <hr className="my-16" />
+        <div className="p-8 px-16 bg-white font-bold rounded shadow-lg">
+          <div className="text-3xl text-center underline">
+            {AppConfig.description}
+          </div>
+          <hr className="m-8" />
+          <p>Elle a aussi pour but de proposer à la communauté :</p>
+          <ul className="list-disc">
+            <li>un lieu d&apos;accueil et de mixité sociale; </li>
+            <li>des chantiers participatifs; </li>
+            <li>des ateliers ouverts; </li>
+            <li>
+              toute autre forme de rencontres participant à la poursuite
+              d&apos;un monde plus artistique, culturel, éducatif,
+              environnemental et social;
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-8 text-3xl p-8 bg-white font-bold rounded shadow-lg">
           <Navbar>
             <li
               className="mr-6 cursor-pointer"
-              onMouseEnter={() => setIsLinkHovered(true)}
-              onMouseLeave={() => setIsLinkHovered(false)}
+              onMouseEnter={() => setIsLinkHovered('yt')}
+              onMouseLeave={() => setIsLinkHovered('')}
             >
               <Link
                 href="https://www.youtube.com/channel/UCxJjunWs6fuqBdycYavUUFQ"
                 target="_blank"
               >
-                {(isLinkHovering && (
+                {(isLinkHovering === 'yt' && (
                   <Image
                     src="/assets/images/yt_logo_rgb_light.png"
                     layout="intrinsic"
@@ -90,7 +107,36 @@ const Index = () => {
                 )}
               </Link>
             </li>
+            <li
+              className="mr-6 cursor-pointer"
+              onMouseEnter={() => setIsLinkHovered('ig')}
+              onMouseLeave={() => setIsLinkHovered('')}
+            >
+              <Link
+                href="https://www.youtube.com/channel/UCxJjunWs6fuqBdycYavUUFQ"
+                target="_blank"
+              >
+                {(isLinkHovering === 'ig' && (
+                  <Image
+                    src="/assets/images/Instagram_Glyph_Gradient_RGB.png"
+                    layout="intrinsic"
+                    width="45"
+                    height="45"
+                  />
+                )) || (
+                  <Image
+                    src="/assets/images/glyph-logo_May2016.png"
+                    layout="intrinsic"
+                    width="45"
+                    height="45"
+                  />
+                )}
+              </Link>
+            </li>
           </Navbar>
+        </div>
+        <div className="mt-8 text-3xl flex align-center justify-center p-8 bg-white font-bold rounded shadow-lg">
+          <Mailchimp />
         </div>
       </div>
       {/* <BlogGallery posts={props.posts} pagination={props.pagination} /> */}
