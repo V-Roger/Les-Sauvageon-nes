@@ -12,7 +12,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="overflow-hidden fixed top-0 left-0 top-0 bottom-0 antialiased w-full px-3 md:px-0">
+  <div className="overflow-hidden fixed top-0 left-0 bottom-0 antialiased w-full px-3 md:px-0">
     {props.meta}
 
     <div className="mx-auto z-10">
