@@ -53,16 +53,6 @@ const Meta = (props: IMetaProps) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
-        <link
-          href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <script
-          async
-          type="text/javascript"
-          src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-        />
         <title>{`${props.title} | ${AppConfig.site_name}`}</title>
         <meta
           name="description"

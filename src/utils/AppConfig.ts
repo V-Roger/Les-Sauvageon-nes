@@ -7,6 +7,6 @@ export const AppConfig = {
   locale: 'fr',
   author: 'Virgil Roger',
   pagination_size: 5,
-  mailchimp_u: process.env.MAILCHIMP_U,
-  mailchimp_id: process.env.MAILCHIMP_ID,
+  mailchimp_u: process.env.NEXT_PUBLIC_MAILCHIMP_U,
+  mailchimp_id: process.env.NEXT_PUBLIC_MAILCHIMP_ID,
 };
