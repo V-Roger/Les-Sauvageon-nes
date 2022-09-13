@@ -82,7 +82,7 @@ const Index = () => {
         <div className="mt-8 text-3xl p-8 bg-white font-bold rounded shadow-lg">
           <Navbar>
             <li
-              className="mr-6 cursor-pointer"
+              className="mt-8 lg:mt-0 mx-4 cursor-pointer"
               onMouseEnter={() => setIsLinkHovered('yt')}
               onMouseLeave={() => setIsLinkHovered('')}
             >
@@ -108,7 +108,7 @@ const Index = () => {
               </Link>
             </li>
             <li
-              className="mr-6 cursor-pointer"
+              className="mt-8 lg:mt-0 mx-4 cursor-pointer"
               onMouseEnter={() => setIsLinkHovered('ig')}
               onMouseLeave={() => setIsLinkHovered('')}
             >

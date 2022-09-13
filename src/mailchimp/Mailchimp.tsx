@@ -23,18 +23,18 @@ const CustomForm = ({
     });
 
   return (
-    <div className="mailchimp__form">
+    <div className="mailchimp__form max-w-full text-base xl:text-3xl">
       <label
         htmlFor="email"
-        className={`flex w-full border-4 border-b-2 p-4 rounded-lg ${
+        className={`flex flex-row flex-wrap align-center border-4 border-b-2 p-4 rounded-lg ${
           status === 'error' &&
           String(message).charAt(0) === '0' &&
           'border-rose-500'
         }`}
       >
-        email&nbsp;:&nbsp;
+        <p className="flex-auto">email&nbsp;:&nbsp;</p>
         <input
-          className="flex-1"
+          className="flex-auto"
           placeholder="michel@tractopel.le"
           type="email"
           id="email"
@@ -43,15 +43,15 @@ const CustomForm = ({
       </label>
       <label
         htmlFor="name"
-        className={`flex w-full border-4 border-t-2 p-4 rounded-lg ${
+        className={`flex flex-row flex-wrap align-center border-4 border-t-2 p-4 rounded-lg ${
           status === 'error' &&
           String(message).charAt(0) === '1' &&
           'border-rose-500'
         }`}
       >
-        nom&nbsp;:&nbsp;
+        <p className="flex-auto">nom&nbsp;:&nbsp;</p>
         <input
-          className="flex-1"
+          className="flex-auto"
           placeholder="Michel du Tractopelle"
           type="name"
           id="name"
@@ -81,7 +81,7 @@ const CustomForm = ({
 };
 
 const Mailchimp = () => (
-  <div className="mailchimp flex flex-col justify-center align-center">
+  <div className="mailchimp w-full flex flex-col justify-center align-center">
     <h4 className="mb-8">
       Restez en contact avec vos Sauvagon·nes préféré·e·s
     </h4>
