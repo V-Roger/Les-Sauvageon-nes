@@ -136,6 +136,18 @@ const Index = () => {
           </Navbar>
         </div>
         <div className="mt-8 text-3xl flex align-center justify-center p-8 bg-white font-bold rounded shadow-lg">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLX2zmaDjaN93E18HEqI4e8y_aw6cm27vW"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="mt-8 text-3xl flex align-center justify-center p-8 bg-white font-bold rounded shadow-lg">
           <Mailchimp />
         </div>
       </div>
