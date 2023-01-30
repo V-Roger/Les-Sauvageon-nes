@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { IBlogGalleryProps } from '../blog/BlogGallery';
 import { Meta } from '../layout/Meta';
@@ -86,13 +85,15 @@ const Index = () => {
               onMouseEnter={() => setIsLinkHovered('yt')}
               onMouseLeave={() => setIsLinkHovered('')}
             >
-              <Link
-                href="https://www.youtube.com/channel/UCxJjunWs6fuqBdycYavUUFQ"
+              <a
+                href="https://www.youtube.com/@lessauvageonnes"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {(isLinkHovering === 'yt' && (
                   <Image
                     src="/assets/images/yt_logo_rgb_light.png"
+                    alt="Youtube des Sauvageon·ne·s"
                     layout="intrinsic"
                     width="200"
                     height="45"
@@ -100,25 +101,57 @@ const Index = () => {
                 )) || (
                   <Image
                     src="/assets/images/yt_logo_mono_light.png"
+                    alt="Youtube des Sauvageon·ne·s"
                     layout="intrinsic"
                     width="200"
                     height="45"
                   />
                 )}
-              </Link>
+              </a>
+            </li>
+            <li
+              className="mt-8 lg:mt-0 mx-4 cursor-pointer"
+              onMouseEnter={() => setIsLinkHovered('ha')}
+              onMouseLeave={() => setIsLinkHovered('')}
+            >
+              <a
+                href="https://www.helloasso.com/associations/les-sauvageon-nes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {(isLinkHovering === 'ha' && (
+                  <Image
+                    src="/assets/images/HelloAsso.svg"
+                    alt="HelloAsso des Sauvageon·ne·s"
+                    layout="intrinsic"
+                    width="200"
+                    height="45"
+                  />
+                )) || (
+                  <Image
+                    src="/assets/images/HelloAsso--dimmed.svg"
+                    alt="HelloAsso des Sauvageon·ne·s"
+                    layout="intrinsic"
+                    width="200"
+                    height="45"
+                  />
+                )}
+              </a>
             </li>
             <li
               className="mt-8 lg:mt-0 mx-4 cursor-pointer"
               onMouseEnter={() => setIsLinkHovered('ig')}
               onMouseLeave={() => setIsLinkHovered('')}
             >
-              <Link
-                href="https://www.youtube.com/channel/UCxJjunWs6fuqBdycYavUUFQ"
+              <a
+                href="https://www.instagram.com/les.sauvageon.nes/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {(isLinkHovering === 'ig' && (
                   <Image
                     src="/assets/images/Instagram_Glyph_Gradient_RGB.png"
+                    alt="Instagram des Sauvageon·ne·s"
                     layout="intrinsic"
                     width="45"
                     height="45"
@@ -126,12 +159,13 @@ const Index = () => {
                 )) || (
                   <Image
                     src="/assets/images/glyph-logo_May2016.png"
+                    alt="Instagram des Sauvageon·ne·s"
                     layout="intrinsic"
                     width="45"
                     height="45"
                   />
                 )}
-              </Link>
+              </a>
             </li>
           </Navbar>
         </div>
