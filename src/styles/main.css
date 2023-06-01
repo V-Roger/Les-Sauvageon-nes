@@ -13,3 +13,15 @@ a:hover {
 @tailwind utilities;
 
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+
+.chaloops {
+  font-family: "chaloops", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bold-chaloops {
+  font-family: "chaloops", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

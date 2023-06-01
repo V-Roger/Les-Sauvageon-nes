@@ -8,20 +8,24 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="absolute top-0 left-0 bottom-0 right-0 antialiased w-full ">
+  <div className="absolute top-0 left-0 bottom-0 right-0 antialiased w-full">
     {props.meta}
 
-    <div
-      className="text-xl w-screen min-h-screen bg-fixed bg-cover bg-bottom"
-      style={{
-        backgroundImage: 'url("/assets/images/sauvageonnes.jpg")',
-      }}
-    >
-      <div>{props.children}</div>
+    <div className="text-xl w-screen h-full min-h-screen pt-8">
+      <div
+        className="fixed top-0 w-screen h-full min-h-screen bg-cover z-0 opacity-20"
+        style={{
+          backgroundImage: 'url("/assets/images/pattern.svg")',
+        }}
+      />
+
+      <div className="relative z-10">{props.children}</div>
 
       <div
-        className="border-t-8 border-white text-center py-8 text-sm"
-        style={{ background: '#58bb47' }}
+        className="relative text-center py-8 text-sm z-10"
+        style={{
+          backgroundColor: 'rgba(88, 187, 71, 0.82)',
+        }}
       >
         © Copyright {new Date().getFullYear()} {AppConfig.site_name}. Powered
         with{' '}

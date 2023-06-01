@@ -53,6 +53,10 @@ const Meta = (props: IMetaProps) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/vhs7yxl.css"
+        ></link>
         <title>{`${props.title} | ${AppConfig.site_name}`}</title>
         <meta
           name="description"

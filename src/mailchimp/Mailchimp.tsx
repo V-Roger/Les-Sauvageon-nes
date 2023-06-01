@@ -23,16 +23,16 @@ const CustomForm = ({
     });
 
   return (
-    <div className="mailchimp__form max-w-full text-base xl:text-3xl">
+    <div className="mailchimp__form max-w-full text-base xl:text-3xl space-y-8">
       <label
         htmlFor="email"
-        className={`flex flex-row flex-wrap align-center border-4 border-b-2 p-4 rounded-lg ${
+        className={`flex flex-row flex-wrap align-center border-4 p-4 rounded-lg ${
           status === 'error' &&
           String(message).charAt(0) === '0' &&
           'border-rose-500'
         }`}
       >
-        <p className="flex-auto">email&nbsp;:&nbsp;</p>
+        <p className="flex-0">email&nbsp;:&nbsp;</p>
         <input
           className="flex-auto"
           placeholder="michel@tractopel.le"
@@ -43,13 +43,13 @@ const CustomForm = ({
       </label>
       <label
         htmlFor="name"
-        className={`flex flex-row flex-wrap align-center border-4 border-t-2 p-4 rounded-lg ${
+        className={`flex flex-row flex-wrap align-center border-4 p-4 rounded-lg ${
           status === 'error' &&
           String(message).charAt(0) === '1' &&
           'border-rose-500'
         }`}
       >
-        <p className="flex-auto">nom&nbsp;:&nbsp;</p>
+        <p className="flex-0">nom&nbsp;:&nbsp;</p>
         <input
           className="flex-auto"
           placeholder="Michel du Tractopelle"
@@ -58,7 +58,7 @@ const CustomForm = ({
           onChange={(event) => setName(event.target.value)}
         />
       </label>
-      <p className="w-full p-4 pb-0 text-sm text-gray-600">
+      <p className="w-full p-4 py-0 my-0 text-sm text-gray-600">
         En m&apos;inscrivant à la newsletter, j&apos;accepte de recevoir des
         communications non commerciales de la part de l&apos;association.
       </p>
@@ -81,11 +81,7 @@ const CustomForm = ({
 };
 
 const Mailchimp = () => (
-  <div className="mailchimp w-full flex flex-col justify-center align-center">
-    <h4 className="mb-8">
-      Restez en contact avec vos Sauvagon·nes préféré·e·s
-    </h4>
-    <hr className="mb-8" />
+  <div className="not-prose flex flex-col justify-center align-center">
     <MailchimpSubscribe
       url={`https://les-sauvageonnes.us14.list-manage.com/subscribe/post?u=${AppConfig.mailchimp_u}&id=${AppConfig.mailchimp_id}`}
       render={({ subscribe, status, message }) => (
