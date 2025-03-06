@@ -164,6 +164,15 @@ const Index = () => {
         </div>
       </div>
 
+      <div className="prose bg-white max-w-2xl xl:max-w-6xl mx-auto mt-24 pt-8 rounded-lg shadow-lg overflow-hidden">
+        <h2 className="text-center mb-8"> Demandez le programme !👇</h2>
+        <iframe
+          src="https://framagenda.org/apps/calendar/embed/EwdKEkQNogbitNJy-XrpsNxbeRC3M8oCQ"
+          className="w-full"
+          height="600"
+        />
+      </div>
+
       <div className="prose prose-lg-lg max-w-2xl xl:max-w-6xl mx-auto mt-32">
         <div className="relative text-center">
           <h1 className="relative inline-block mb-0 bold-chaloops bg-white rounded-full shadow-lg px-12 py-1">
